@@ -8,6 +8,9 @@ public class add12345
     public static void cadd()
     {
          decimal a =10;
+
+
+         
          
       decimal b =20;
      decimal c;
