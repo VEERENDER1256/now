@@ -8,6 +8,9 @@ public class ADDITION3
  {
     integer num4;
      num4 = num1+num2+num3;
+
+
+     
      return num4;
    
  }
