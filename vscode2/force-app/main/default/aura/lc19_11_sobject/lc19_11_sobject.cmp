@@ -1,0 +1,8 @@
+<aura:component controller="class_19_11_sobj">
+    
+    <aura:attribute name="acc" type="Account" default="{'sObjectType':'Account'}" />
+    
+    <lightning:input label="enter name" value="{!v.acc.Name}"/>
+    <lightning:button label="create" onclick="{!c.create}"/>
+	
+</aura:component>

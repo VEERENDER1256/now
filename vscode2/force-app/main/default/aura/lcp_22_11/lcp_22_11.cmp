@@ -1,0 +1,22 @@
+<aura:component controller="cl22_11">
+      <aura:attribute name="acco" type="List" default="[]"/>
+    <aura:attribute name="col" type="List"/>
+    <aura:attribute name="flag" type="boolean" default="true"/>
+   
+    <aura:handler name="bang" event="c:le_22_11" action="{!c.handle}" />
+    <aura:handler name="init" value="{!this}" action="{!c.initer}"/>
+  
+     <c:lc_22_11/>
+    
+    
+    
+    <lightning:card title="Account Table">
+        <lightning:dataTable keyField="id" data="{!v.acco}" columns="{!v.col}"/>
+      <aura:set attribute="actions">
+        <aura:if isTrue= "{!v.flag}" >
+            <lightning:button label="Mass Create"  onclick="{!c.clickme}" variant="success"/>
+          </aura:if>
+          </aura:set> 
+    </lightning:card>
+	
+</aura:component>

@@ -1,0 +1,19 @@
+<aura:component  controller="ADDITION3">
+    <div class="mybox">
+        <img src="{!$Resource.img1}"/>
+    </div>
+    <aura:attribute name="add1" type="integer"/>
+    <aura:attribute name="add2" type="integer"/>
+    <aura:attribute name="add3" type="integer"/>
+    <aura:attribute name="res" type="integer"/>
+    <lightning:card title="ADD">
+        <lightning:input label="enter number 1" value="{!v.add1}"/>
+        <lightning:input label="enter number 2" value="{!v.add2}"/>
+        <lightning:input label="enter number 3" value="{!v.add3}"/><p></p>
+     
+        <lightning:button label="calculate" onclick="{!c.callme}" variant="success"/><p></p>
+        The result is : {!v.res}
+    </lightning:card>
+    
+	
+ </aura:component>

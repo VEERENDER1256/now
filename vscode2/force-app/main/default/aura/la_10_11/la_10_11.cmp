@@ -1,0 +1,18 @@
+<aura:component >
+    
+    <aura:attribute name="res" type="integer"/>
+    
+    <lightning:card title="Calculator" iconName="utility:add" >
+                
+        
+        <aura:set attribute="actions" >
+           
+            <lightning:input label="Enter first Number" aura:id="ak"  />
+            <lightning:button label="calculate" onclick="{!c.callme}" aura:id="pk"/>
+        
+        </aura:set>
+        
+        
+    </lightning:card>
+	
+</aura:component>

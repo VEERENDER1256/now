@@ -1,0 +1,15 @@
+<aura:component >
+  
+    <aura:attribute name="Name" type="string" default="Veerender"/>
+       <aura:attribute name="phone" type="Integer" default="78907655"/>
+    
+    <lightning:card  title="Name of veerender">
+        <b>the name is:</b>{!v.Name}  <p></p>
+        <b>phone no is:</b>{!v.phone}
+        <aura:set attribute="actions">
+            <lightning:button label="subme"  iconName="utility:add" onclick="{!c.subme}" variant="brand"/>
+            <lightning:button label="clearme" iconName="utility:add" onclick="{!c.clearme}" variant="destructive"/>
+        </aura:set>
+    </lightning:card>
+	
+</aura:component>

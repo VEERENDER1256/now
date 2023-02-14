@@ -1,0 +1,94 @@
+<aura:component>
+     <aura:import library="lightning:alert" property="LightningAlert" />
+    <aura:attribute name="isFourVisible" type="Boolean" default="false" />
+     
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'Sales', 'value': 'option1'},
+    {'label': 'Force', 'value': 'option2'}
+    ]"/>
+    <aura:attribute name="value" type="String" default="option1"/>
+    <lightning:tabset    variant="scoped">
+        <lightning:tab label="Item One">
+           <lightning:button onclick="{! c.handleShowActiveSectionName }" label="Show Active Section Name"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionC }" label="Open Section C"/>
+
+    <lightning:accordion aura:id="accordion" activeSectionName="B">
+        <lightning:accordionSection name="A" label="Accordion Title A">
+            <aura:set attribute="actions">
+                <lightning:buttonMenu aura:id="menu" alternativeText="Show menu" iconSize="x-small" menuAlignment="right">
+                    <lightning:menuItem value="New" label="Menu Item One" />
+                    <lightning:menuItem value="Edit" label="Menu Item Two" />
+                </lightning:buttonMenu>
+            </aura:set>
+            <aura:set attribute="body">
+                <p>This is the content area for section A.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>The section height expands to fit your content.</p>
+            </aura:set>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="B" label="Accordion Title B">
+                <p>This is the content area for section B.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>The section height expands to fit your content.</p>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="C" label="Accordion Title C">
+                <p>This is the content area for section C.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>The section height expands to fit your content.</p>
+        </lightning:accordionSection>
+    </lightning:accordion>
+        </lightning:tab>
+        
+        
+        
+        
+        
+        
+        
+        
+        <lightning:tab label="Item Two">
+           <lightning:select name="select1" label="How many tickets?" required="true">
+        <option value="">choose one...</option>
+        <option value="1">one</option>
+        <option value="2">two</option>
+        <option value="3">three</option>
+    </lightning:select>
+        </lightning:tab>
+        
+        
+        
+        
+        
+        <lightning:tab label="Item Three">
+            Three Content !
+            
+            
+             <lightning:button onclick="{! c.openAlert }" label="Open Alert"/>
+        </lightning:tab>
+        
+        
+        
+        
+        
+        
+        
+        <aura:if isTrue="{! v.isFourVisible }">
+            <lightning:tab label="Item Four">
+
+    <lightning:radioGroup name="radioGroup"
+                          label="Radio Group"
+                          options="{! v.options }"
+                          value="{! v.value }"
+                          type="radio"/>
+
+            </lightning:tab>
+        </aura:if>
+    </lightning:tabset>
+    <lightning:button label="Toggle Optional Tab" onclick="{! c.toggleOptionalTab }" />
+</aura:component>

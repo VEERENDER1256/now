@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="dispaly" type="string"/>
+    
+    <lightning:input label="enter name" aura:id="de"/>
+    <lightning:input label="enter name" aura:id="db"/>
+    <lightning:button label="click" onclick="{!c.clickme}"/>
+    
+    enteredname:{!v.dispaly}
+	
+</aura:component>

@@ -1,0 +1,19 @@
+<aura:component >
+    <lightning:button label="Follow"  iconName="utility:add"  onclick="{!c.call}" />
+    <lightning:buttonGroup>
+     <lightning:button label="New Contact"  />
+    <lightning:button label="New Case"  />
+         <lightning:button label="New Note"  />
+        <lightning:buttonMenu alternativeText="click"> 
+        <lightning:menuItem label="Check for updates" value="p"/>
+        <lightning:menuItem label="New Oppurtunity" value="e"/>
+        <lightning:menuItem label="submit for approval" value="s"/>
+        <lightning:menuItem label="pesi" value="i"/>
+      
+    </lightning:buttonMenu>
+    
+    </lightning:buttonGroup>
+    
+    
+	
+</aura:component>

@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:registerEvent  name="bangaram" type="c:event20_11"/>
+    <aura:handler  name="bangaram" event="c:event20_11" action="{!c.handle}" />
+    
+    <aura:attribute name="msg"  type="string" />
+    
+    
+    <lightning:card>
+        
+        <lightning:input  label= "enter name"  value="{!v.msg}"  />
+        <lightning:button label= "show"        onclick="{!c.click}"   />
+        
+    </lightning:card>    
+</aura:component>

@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="num1" type="integer" />
+    <aura:attribute name="res" type="integer"/>
+    
+
+    
+    <lightning:card title="Math Calculator" iconName="utility:add">
+    <lightning:input label="Enter First Number" type="scroll" value="{!v.num1}" onchange="{!c.callme}"/>
+    
+    <p></p>
+     <b>THE RESULT IS:</b>{!v.res}
+    
+    
+        </lightning:card>
+	
+</aura:component>

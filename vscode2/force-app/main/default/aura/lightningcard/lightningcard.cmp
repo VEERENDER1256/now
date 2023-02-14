@@ -1,0 +1,13 @@
+<aura:component >
+    <lightning:card iconName="standard:account">
+    <aura:set attribute="title">
+        Account<br></br>
+        <b>Capital Info Solutions</b><lightning:buttonIcon iconName="utility:hierarchy" alternativetext="hi"/>
+    </aura:set>
+    <aura:set attribute="actions">
+        <c:welcome/>
+    </aura:set>
+
+        Type
+        </lightning:card>
+</aura:component>

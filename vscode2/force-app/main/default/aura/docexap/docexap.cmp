@@ -1,0 +1,15 @@
+<aura:component >
+<aura:attribute name="empName" type="String" />
+<aura:attribute name="age" type="Integer" required="true" />
+<aura:attribute name="Salary" type="Decimal" default="10000" />
+<aura:attribute name="City" type="String" description="Home town" />
+    <aura:handler name="init" value="{!this}" action="{!c.show}" />
+    
+    <div class="mybox">
+Name : {!v.empName} <br/>
+Age :{! v.age} <br/>
+Salary:{!v.Salary} <br/>
+City :{!v.City}
+    </div>
+  
+</aura:component>

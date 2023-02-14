@@ -1,0 +1,10 @@
+<aura:component >
+    
+    
+    <aura:attribute name="valuer" type="integer" default="2345" />
+    <aura:handler name="veerender" event="c:le1302" action="{!c.click}"/>
+    
+    value is: {!v.valuer}
+    <c:lc1302/>
+    
+</aura:component>

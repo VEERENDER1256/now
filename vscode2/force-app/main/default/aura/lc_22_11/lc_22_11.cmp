@@ -1,0 +1,19 @@
+<aura:component controller="cl_22_11_hw" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+   
+   
+	<aura:attribute name="accs" type="Account" default= "{'sObjectType':'Account'}" />
+     <aura:registerEvent name="bang" type="c:le_22_11" />
+    
+    <lightning:card title="Account" iconName="standard:account">
+         <lightning:input label="Account Name" value="{!v.accs.Name}"/>
+         <lightning:input label="Account phone" value="{!v.accs.Phone}"/>
+         <lightning:input label="Account Industry" value="{!v.accs.Industry}"/>
+        
+        <aura:set attribute="actions">
+            <lightning:button label="create"  onclick="{!c.showme}" variant="brand"/>
+        </aura:set>
+        
+    </lightning:card>
+    
+    
+</aura:component>

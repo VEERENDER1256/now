@@ -1,0 +1,12 @@
+<aura:component controller="sendemail_19_11"  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    
+    <aura:attribute name="em"   type="list"/>
+    <aura:attribute name="sub"  type="string"/>
+    <aura:attribute name="body" type="string"/>
+    
+    <lightning:input  label="enter email"   value="{!v.em}"/>
+    <lightning:input  label="enter subject" value="{!v.sub}"/>
+    <lightning:input  label="enter body"    value="{!v.body}"/>
+    <lightning:button label="send"          onclick="{!c.sendme}"/>
+    
+</aura:component>

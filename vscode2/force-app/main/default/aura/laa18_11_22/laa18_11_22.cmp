@@ -1,0 +1,15 @@
+<aura:component controller="sobjectlcomp">
+    <aura:attribute name="acc" type="Contact[]"/>
+    
+    <aura:iteration items="{!v.acc}" var="c">
+        Firstname:{!c.FirstName}<p></p>
+    lastname:{c.LastName}<p></p>
+    phone:{c.Phone}<p></p>
+    id:{c.id}<p></p>
+    </aura:iteration>
+    
+    
+    <lightning:button label="show" onclick="{!c.showme}"/>
+    
+	
+</aura:component>

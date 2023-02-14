@@ -1,0 +1,10 @@
+<aura:component >
+    
+    <aura:registerEvent name="veerender" type="c:le1302" />
+    
+    <lightning:input label="enter number1" aura:id="te"/>
+    <lightning:input label="enter number2" aura:id="tb"/>
+    <lightning:button label="click" onclick="{!c.clickme}"/>
+    
+    
+</aura:component>

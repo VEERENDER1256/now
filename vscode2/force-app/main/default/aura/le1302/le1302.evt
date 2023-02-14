@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT">
+    
+    <aura:attribute name="veeru" type="integer" default="23" />
+    
+</aura:event>
